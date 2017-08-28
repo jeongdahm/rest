@@ -1,14 +1,16 @@
 package hello;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Tbl_Web_User_Info {
 	
 	
-	//@GeneratedValue(strategy=GenerationType.AUTO)
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer seqno;
 	private String userid;
 	private String certuserid;
@@ -19,6 +21,7 @@ public class Tbl_Web_User_Info {
 	private String lastmainaccesstime;
 	private String lastremoteaccesstime;
 	private Integer deleted;
+	
 	public Integer getSeqno() {
 		return seqno;
 	}
